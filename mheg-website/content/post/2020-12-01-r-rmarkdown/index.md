@@ -14,6 +14,8 @@ This is an R Markdown document. Markdown is a simple formatting syntax for autho
 
 You can embed an R code chunk like this:
 
+Oi meu nome é joao!!!
+
 
 ```r
 summary(cars)
