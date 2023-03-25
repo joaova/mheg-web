@@ -1,43 +1,66 @@
-baseurl: /
-languageCode: en-us
-title: A Hugo website
-theme: hugo-lithium
-googleAnalytics: ''
-disqusShortname: ''
-ignoreFiles:
-  - \.Rmd$
-  - \.Rmarkdown$
-  - _cache$
-  - \.knit\.md$
-  - \.utf8\.md$
-permalinks:
-  post: /:year/:month/:day/:slug/
+baseurl: https://example.com
+title: Hugo DPSG
+languageCode: de
+DefaultContentLanguage: de
+paginate: '10'
+theme: hugo-dpsg
+Author:
+  avatar: img/avatar.png
+  bio: The Scout Master is the leader of this local scout group
+  name: Scout Master
+Params:
+  authorbox: yes
+  copyright: DGSP local group
+  dateformat: 02.01.2006
+  description: Welcome to our scout group!
+  footer:
+    right: Donate!
+    text: '[Imprint and Privacy](/imprint)'
+  indexPager: yes
+  logo:
+    header: img/header.jpg
+    image: img/placeholder.png
+    subtitle: Welcome to our group site
+    title: Hugo DPSG
+  mainSections:
+    - post
+    - blog
+    - news
+  opengraph: yes
+  pager: yes
+  post_meta:
+    - author
+    - date
+    - categories
+    - translations
+  readmore: no
+  schema: yes
+  sidebar:
+    home: right
+    list: left
+    single: no
+    widgets:
+      - search
+      - recent
+      - categories
+      - taglist
+      - social
+      - languages
+  style:
+    vars:
+      highlightColor: '#003056'
+  toc: yes
+  twitter_cards: yes
+  widgets:
+    recent_num: 5
+    tags_counter: no
 menu:
   main:
-    - name: About
+    - identifier: start
+      name: Start
+      url: /
+      weight: 1
+    - identifier: about
+      name: About
       url: /about/
-    - name: GitHub
-      url: https://github.com/rstudio/blogdown
-    - name: Twitter
-      url: https://twitter.com/rstudio
-params:
-  MathJaxCDN: //cdnjs.cloudflare.com/ajax/libs
-  MathJaxVersion: 2.7.5
-  description: A website built through Hugo and blogdown.
-  favicon: favicon.ico
-  highlightjsCDN: //cdnjs.cloudflare.com/ajax/libs
-  highlightjsLang:
-    - r
-    - yaml
-  highlightjsTheme: github
-  highlightjsVersion: 9.12.0
-  logo:
-    alt: Logo
-    height: 50
-    url: logo.png
-    width: 50
-markup:
-  defaultMarkdownHandler: goldmark
-  goldmark:
-    renderer:
-      unsafe: yes
+      weight: 2
